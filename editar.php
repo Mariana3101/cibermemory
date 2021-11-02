@@ -13,27 +13,27 @@
             <div class="row gtr-uniform">
                 <!--Ingresar titulo-->
                 <div class="col-12">
-                    <label for="">Titulo</label>
+                    <label for="titulo">Titulo</label>
                     <input type="text" name="demo-name" id="demo-name" value="" placeholder="Titulo" />
                 </div>
                 <!--Ingresar fecha-->
                 <div class="col-6 col-12-xsmall">
-                    <label for="">Fecha</label>
+                    <label for="fecha">Fecha</label>
                     <input type="text" name="demo-name" id="demo-name" value="" placeholder="2021-09-21" />
                 </div>
                 <!--Ingresar hora de inicio-->
                 <div class="col-6 col-12-xsmall">
-                    <label for="">Hora de inicio </label>
+                    <label for="hora_inicio">Hora de inicio </label>
                     <input type="text" name="demo-text" id="demo-text" value="" placeholder="18:30" />
                 </div>
                 <!--Ingresar hora de finalizacion-->
                 <div class="col-6 col-12-xsmall">
-                    <label for="">Hora de finalización </label>
+                    <label for="hora_finalizacion">Hora de finalización </label>
                     <input type="text" name="demo-text" id="demo-text" value="" placeholder="01:30" />
                 </div>
                 <!--Seleccionar tipo de recuerdo -->
                 <div class="col-12">
-                    <label for="">Seleccionar tipo </label>
+                    <label for="tipo_recuerdo">Seleccionar tipo </label>
                     <select name="demo-category" id="demo-category">
                         
                         <option value="1">Información</option>
@@ -43,7 +43,7 @@
                     </select>
                 </div>
                 <!--Seleccionar Emoticon-->
-                <label for="">Emoticon </label>
+                <label for="emoticon">Emoticon </label>
                 <div class="col-4 col-12-small">
                     <input type="radio" id="demo-priority-low" name="demo-priority" checked>
                     <label for="demo-priority-low">&#128512</label>
@@ -69,17 +69,17 @@
                 <!--                             -->
                 <!--Ingresar Compañia -->
                 <div class="col-12">
-                    <label for="">Compañia </label>
+                    <label for="compañia">Compañia </label>
                     <input type="text" name="demo-name" id="demo-name" value="" placeholder="Jose, Andrea ..." />
                 </div>
                  <!--Ingresar Ubicacion -->
                  <div class="col-12">
-                    <label for="">Ubicación</label>
+                    <label for="ubicacion">Ubicación</label>
                     <input type="text" name="demo-name" id="demo-name" value="" placeholder="Charcas 2315, CABA" />
                 </div>
                 <!--Escriba su recuerdo -->
                 <div class="col-12">
-                    <label for="">Escriba su recuerdo </label>
+                    <label for="escrito">Escriba su recuerdo </label>
                     <textarea name="demo-message" id="demo-message" placeholder="Enter your memory " rows="6"></textarea>
                 </div>
                 <div class="col-12">

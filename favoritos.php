@@ -1,17 +1,6 @@
 <?php include "vistas/templates/header.php"; ?>
 		<!-- Wrapper -->
-		<div id="wrapper">
-			<section id="intro" class="wrapper style1 fullscreen fade-up">
-				<div class="inner">
-					<!--Tabs-->
-					<nav class="nav">
-						<a class="nav-link active" aria-current="page" href="#busqueda_simple">Busqueda simple</a>
-						<a class="nav-link" href="#">Busqueda Avanzada</a>
-						<a class="nav-link" href="#">Favoritos</a>
-					
-					</nav>
-					<!--Fin Tabs-->
-					<br>
+<?php include "vistas/templates/nav_buscar.php"; ?>
 					  
 					<section id="favoritos">
 					
@@ -68,7 +57,7 @@
 											<li><a class="dropdown-item" href="#">Renderizar</a></li>
 											<li><a class="dropdown-item" href="#">Borrar</a></li>
 											<li><a class="dropdown-item" href="#">Agregar a Favoritos</a></li>
-											<li><a class="dropdown-item" href="#">Editar</a></li>
+											<li><a class="dropdown-item" href="editar.php">Editar</a></li>
 											<li><a class="dropdown-item" href="#">Cambiar Imagen </a></li>
 										</ul>
 								  	</div>
@@ -98,7 +87,7 @@
 											<li><a class="dropdown-item" href="#">Renderizar</a></li>
 											<li><a class="dropdown-item" href="#">Borrar</a></li>
 											<li><a class="dropdown-item" href="#">Agregar a Favoritos</a></li>
-											<li><a class="dropdown-item" href="#">Editar</a></li>
+											<li><a class="dropdown-item" href="editar.php">Editar</a></li>
 											<li><a class="dropdown-item" href="#">Cambiar Imagen </a></li>
 										</ul>
 								  	</div>
@@ -129,7 +118,7 @@
 											<li><a class="dropdown-item" href="#">Renderizar</a></li>
 											<li><a class="dropdown-item" href="#">Borrar</a></li>
 											<li><a class="dropdown-item" href="#">Agregar a Favoritos</a></li>
-											<li><a class="dropdown-item" href="#">Editar</a></li>
+											<li><a class="dropdown-item" href="editar.php">Editar</a></li>
 											<li><a class="dropdown-item" href="#">Cambiar Imagen </a></li>
 										</ul>
 								  	</div>

@@ -10,7 +10,7 @@
                
 				<!-- registrar -->
 				<section id="intro" class="wrapper style2 spotlights">
-                 
+               
                     <section class="style2">
                         <a href="#" class="image"><img src="vistas/images/pic01.jpg" alt="" data-position="center center" /></a>
                         <div class="content">
@@ -18,7 +18,7 @@
                                 <h2>Sed ipsum dolor</h2>
                                 <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
                                 <ul class="actions">
-                                    <li><a href="#" class="button">Learn more</a></li>
+                                    <li><a href="detalle.php" class="button">Learn more</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -33,7 +33,7 @@
                             <li><input type="submit" value="Confirmar" class="primary" /></li>
                             
                         </ul>
-                        <small>¿Es la primera vez que ingresas?</small><a href="#"> REGISTRATE</a>
+                        <small>¿Es la primera vez que ingresas?</small><a href="registrar.php"> REGISTRATE</a>
                     </div>
                 </div>
             </form>
