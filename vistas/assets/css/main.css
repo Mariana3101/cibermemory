@@ -130,7 +130,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 10000px) {
 
 			body, input, select, textarea {
 				font-size: 12pt;
@@ -234,7 +234,7 @@ input, select, textarea {
 		font-size: 0.6em;
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 0px) {
 
 		h1 {
 			font-size: 2em;
@@ -815,7 +815,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 10000px) {
 
 			.row {
 				display: flex;
@@ -1305,7 +1305,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 0px) {
 
 			.row {
 				display: flex;
@@ -2193,7 +2193,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 0px) {
 
 			.features section {
 				padding: 2.5em 1.5em 0.1em 5.5em ;
@@ -2977,7 +2977,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 0px) {
 
 			.split > * {
 				margin: 3em 0 0 0;
@@ -3119,7 +3119,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 0px) {
 
 			.spotlights > section > .image {
 				height: 50vh;
@@ -3220,7 +3220,7 @@ input, select, textarea {
 
 			}
 
-			@media screen and (max-width: 1280px) {
+			@media screen and (max-width: 10000px) {
 
 				.wrapper > .inner {
 					width: 100%;
@@ -3228,7 +3228,7 @@ input, select, textarea {
 
 			}
 
-			@media screen and (max-width: 736px) {
+			@media screen and (max-width: 0px) {
 
 				.wrapper > .inner {
 					padding: 3em 2em 1em 2em ;
@@ -3286,7 +3286,7 @@ input, select, textarea {
 				height: 100vh;
 			}
 
-			@media screen and (max-width: 1280px) {
+			@media screen and (max-width: 10000px) {
 
 				.wrapper.fullscreen {
 					min-height: calc(100vh - 2.5em);
@@ -3298,7 +3298,7 @@ input, select, textarea {
 
 			}
 
-			@media screen and (max-width: 736px) {
+			@media screen and (max-width: 0px) {
 
 				.wrapper.fullscreen {
 					padding: 2em 0;
@@ -3428,7 +3428,7 @@ input, select, textarea {
 							color: #ffffff;
 						}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 0px) {
 
 			#header {
 				padding: 1em 2em;
@@ -3471,7 +3471,7 @@ input, select, textarea {
 		margin-left: 18em;
 	}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 10000px) {
 
 			#sidebar + #wrapper {
 				margin-left: 0;
@@ -3480,7 +3480,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 0px) {
 
 			#sidebar + #wrapper {
 				padding-top: 0;
@@ -3498,7 +3498,7 @@ input, select, textarea {
 		margin-left: 18em;
 	}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 10000px) {
 
 			#sidebar + #wrapper + #footer {
 				margin-left: 0;
@@ -3587,7 +3587,7 @@ input, select, textarea {
 				margin: 1.5em 0 0 0;
 				opacity: 1;
 				padding: 0;
-				position: relative;
+				position: relative; 
 			}
 
 				#sidebar nav > ul > li:first-child {
@@ -3798,12 +3798,11 @@ input, select, textarea {
 		body.is-preload #sidebar nav ul li {
 			-moz-transform: translateY(2em);
 			-webkit-transform: translateY(2em);
-			-ms-transform: translateY(2em);
 			transform: translateY(2em);
 			opacity: 0;
 		}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 10000px) {
 
 			#sidebar {
 				height: 3.5em;
@@ -3865,7 +3864,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 0px) {
 
 			#sidebar {
 				display: none;
@@ -3895,7 +3894,7 @@ input, select, textarea {
 
 			}
 
-			@media screen and (max-width: 736px) {
+			@media screen and (max-width: 0px) {
 
 				#intro p {
 					font-size: 1em;
@@ -3903,7 +3902,7 @@ input, select, textarea {
 
 			}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 10000px) {
 
 			#intro {
 				background-attachment: scroll;
