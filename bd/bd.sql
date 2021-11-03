@@ -87,6 +87,10 @@ INSERT INTO `emoticon_recuerdo` (`idEmoticonRecuerdo`, `idRecuerdo`, `idEmoticon
   (3,  1, 5);
 
   --favorito
+
+  -- ACA SALE ESTE ERROR #1072 - La columna clave 'favorito' no existe en la tabla
+  -- No me deja crear la tabla MYSQL en php admin
+  
   CREATE TABLE IF NOT EXISTS `favorito` (
   `idFavorito` int(11) NOT NULL AUTO_INCREMENT,
   `idUsuario` int(11) NOT NULL,

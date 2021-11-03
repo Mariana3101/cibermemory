@@ -1,4 +1,4 @@
-<?php include "vistas/templates/header.php"; ?>
+
 
 		<!-- Wrapper -->
         <div id="wrapper">
@@ -33,7 +33,7 @@
                             <li><input type="submit" value="Confirmar" class="primary" /></li>
                             
                         </ul>
-                        <small>¿Es la primera vez que ingresas?</small><a href="registrar.php"> REGISTRATE</a>
+                        <small>¿Es la primera vez que ingresas?</small><a href="index.php?ruta=registrar"> REGISTRATE</a>
                     </div>
                 </div>
             </form>
@@ -46,4 +46,3 @@
 </div>
 
 
-<?php include "vistas/templates/footer.php"; ?>

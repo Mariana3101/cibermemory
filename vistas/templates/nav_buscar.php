@@ -3,9 +3,9 @@
 				<div class="inner">
 					<!--Tabs-->
 					<nav class="nav">
-						<a class="nav-link active" aria-current="p" href="busqueda_simple.php">Busqueda simple</a>
-						<a class="nav-link" href="busqueda_avanzada.php">Busqueda Avanzada</a>
-						<a class="nav-link" href="favoritos.php">Favoritos</a>
+						<a class="nav-link active" aria-current="p" href="index.php?ruta=busqueda_simple">Busqueda simple</a>
+						<a class="nav-link" href="index.php?ruta=busqueda_avanzada">Busqueda Avanzada</a>
+						<a class="nav-link" href="index.php?ruta=favoritos">Favoritos</a>
 					
 					</nav>
 					<!--Fin Tabs-->

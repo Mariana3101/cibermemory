@@ -1,4 +1,3 @@
-<?php include "vistas/templates/header.php"; ?>
 
 	<!-- Wrapper -->
     <div id="wrapper">
@@ -95,4 +94,3 @@
 </div>
 
 
-<?php include "vistas/templates/footer.php"; ?>

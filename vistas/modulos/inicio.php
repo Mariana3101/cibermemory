@@ -1,5 +1,3 @@
-<?php include "vistas/templates/header.php"; ?>
-<!-- Aqui va el codigo de la aplicacion
 <!-- Wrapper -->
 <div id="wrapper" class="wrapper style1-alt">
                 <section  style="text-align: center;">
@@ -51,5 +49,3 @@
 
                 
             </div>
-
-<?php include "vistas/templates/footer.php"; ?>

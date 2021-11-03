@@ -1,4 +1,4 @@
-<?php include "vistas/templates/header.php"; ?>
+
 		<!-- Wrapper -->
 <?php include "vistas/templates/nav_buscar.php"; ?>
 					  
@@ -140,4 +140,3 @@
 			
 
 
-<?php include "vistas/templates/footer.php"; ?>

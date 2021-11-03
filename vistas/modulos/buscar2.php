@@ -1,20 +1,10 @@
-<?php include "vistas/templates/header.php"; ?>
+
 
 	<!-- Wrapper -->
-    <div id="wrapper">
-			<section id="intro" class="wrapper style1 fullscreen fade-up">
-				<div class="inner">
-					<!--Tabs-->
-					<nav class="nav">
-						<a class="nav-link active" aria-current="page" href="#busqueda_simple">Busqueda simple</a>
-						<a class="nav-link" href="#">Busqueda Avanzada</a>
-						<a class="nav-link" href="#">Favoritos</a>
-					
-					</nav>
-					<!--Fin Tabs-->
-					<br>
+<?php include "vistas/templates/nav_buscar.php"; ?>
 					  
-					<section id="busqueda_avanzada">
+					  
+					<section id="buscar2">
 						<!--Buscador -->
 
 						
@@ -34,11 +24,11 @@
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Seleccionar Tipo</label>
                                 <select class="form-control" id="exampleFormControlSelect1">
-                                  <option>1</option>
-                                  <option>2</option>
-                                  <option>3</option>
-                                  <option>4</option>
-                                  <option>5</option>
+                                  <option>Cualquiera</option>
+                                  <option>Video</option>
+                                  <option>Audio</option>
+                                  <option>Imagen</option>
+                                  <option>Información</option>
                                 </select>
                               </div>
 							<!--Seleccionar fecha -->
@@ -56,22 +46,28 @@
                               <div class="form-group">
                                 <label for="exampleFormControlSelect1">Seleccionar Importancia </label>
                                 <select class="form-control" id="exampleFormControlSelect1">
-                                  <option>1</option>
-                                  <option>2</option>
-                                  <option>3</option>
-                                  <option>4</option>
-                                  <option>5</option>
+                                  <option>Cualquiera</option>
+                                  <option>1/4</option>
+                                  <option>2/4</option>
+                                  <option>3/4</option>
+                                  <option>4/4</option>
                                 </select>
                               </div>
                               <!--Seleccionar emociones -->
                               <div class="form-group">
                                 <label for="exampleFormControlSelect1">Seleccionar Emociones </label>
                                 <select class="form-control" id="exampleFormControlSelect1">
-                                  <option>1</option>
-                                  <option>2</option>
-                                  <option>3</option>
-                                  <option>4</option>
-                                  <option>5</option>
+                                  <option>Cualquiera</option>
+                                  <option>&#x1F600;</option>
+                                  <option>&#x1F625;</option>
+                                  <option>&#x1F620;</option>
+                                  <option>&#x1F923;</option>
+                                  <option>&#x1F62D;</option>
+                                  <option>&#x1F60E;</option>
+                                  <option>&#x1F628;</option>
+                                  <option>&#x1F976;</option>
+                                  <option>&#x1F975;</option>
+                                  <option>&#x1F51E;</option>
                                 </select>
                               </div>
                               <!--Seleccionar Compañia -->
@@ -114,8 +110,6 @@
 			</section>
 		</div>		
 			
-	
 			
 
 
-<?php include "vistas/templates/footer.php"; ?>

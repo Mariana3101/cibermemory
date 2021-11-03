@@ -1,4 +1,4 @@
-<?php include "vistas/templates/header.php"; ?>
+
 
 	<!-- Wrapper -->
     <div id="wrapper">
@@ -58,4 +58,3 @@
 
 
 
-<?php include "vistas/templates/footer.php"; ?>
