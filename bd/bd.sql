@@ -50,12 +50,14 @@ INSERT INTO `emoticon` (`idEmoticon`, `emoticon`, `descripcion`) VALUES
 
 
   -- recuerdo
+  -- falta relacionar la tabla recuerdo con tipo de recuerdo 
 CREATE TABLE IF NOT EXISTS `recuerdo` (
   `idRecuerdo` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(30) ,
   `fecha` date ,
   `hora_desde` time,
   `hora_hasta` time,
+  `tipo_recuerdo` int(1), 
   `ubicacion` varchar(30) ,
   `coordenadas` point DEFAULT NULL,
   `compañia` varchar(30) ,
@@ -64,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `recuerdo` (
   PRIMARY KEY (`idRecuerdo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
-INSERT INTO `recuerdo` (`idRecuerdo`, `titulo`, `fecha`, `hora_desde`, `hora_hasta`,`ubicacion`, `coordenadas`,`compañia`, `comentarios`) VALUES
+INSERT INTO `recuerdo` (`idRecuerdo`, `titulo`, `fecha`, `hora_desde`, `hora_hasta`,tipo_recuerdo,`ubicacion`, `coordenadas`,`compañia`, `comentarios`) VALUES
 	(1, 'Casa de Jorge', "2021-09-21", "18:30", "01:30", "Charcas  2909 - CABA", POINT(-34.59462072, -58.40854815),"Jorge, Mario, Maria", "Juntada con amigos festejando el dia de la primavera");
 
 
@@ -91,13 +93,14 @@ INSERT INTO `emoticon_recuerdo` (`idEmoticonRecuerdo`, `idRecuerdo`, `idEmoticon
   -- ACA SALE ESTE ERROR #1072 - La columna clave 'favorito' no existe en la tabla
   -- No me deja crear la tabla MYSQL en php admin
   
-  CREATE TABLE IF NOT EXISTS `favorito` (
+  CREATE TABLE  `favorito` (
   `idFavorito` int(11) NOT NULL AUTO_INCREMENT,
   `idUsuario` int(11) NOT NULL,
   `idRecuerdo` int(11) NOT NULL,
   `nombre` varchar(30),
-  PRIMARY KEY (`favorito`),
+  PRIMARY KEY (`idFavorito`),
   FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario),
   FOREIGN KEY (idRecuerdo) REFERENCES  recuerdo(idRecuerdo)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
+-- falta tabla tipo_recuerdo
