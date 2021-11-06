@@ -10,13 +10,13 @@
 
         <section>
             <h2>Iniciar Sesion</h2>
-            <form method="post" action="#">
+            <form method="post" >
                 <div class="row gtr-uniform">
                     <div class="col-12">
-                        <input type="email" name="demo-name" id="demo-name" value="" placeholder="Email" required />
+                        <input type="email" name="demo-email" id="demo-name" value="" placeholder="Email" required />
                     </div>
                     <div class="col-6 col-12">
-                        <input type="password" name="demo-email" id="demo-email" value="" placeholder="Contraseña" required />
+                        <input type="text" name="demo-pass" id="demo-email" value="" placeholder="Contraseña" required />
                     </div>
                 
                     <!--Aca va la huella digital-->
@@ -46,3 +46,10 @@
 </div>
 
 
+
+<?php
+
+$ingreso= new AdminC();
+$ingreso ->IngresoC(); //llamo a la funcion IngresoC
+
+?>

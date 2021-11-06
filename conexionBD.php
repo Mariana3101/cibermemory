@@ -5,7 +5,8 @@ class ConexionBD
 	
 	static public function cBD()
 	{
-		$bd = new PDO("mysql:host=localhost;dbname=cybermemorybd","root","");
+		$bd = new PDO("mysql:host=localhost;dbname=cyberMemoryBD","root","");
+		
 		return $bd;
 		
 		  // Verificamos la conexión a la Base de Datos MySQL 
