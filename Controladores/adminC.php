@@ -13,6 +13,13 @@ class AdminC
             $tablaBD = 'usuario'; //se crea variable que contiene el nombre de la tabla
             //solicitamos respuesta al modelo, llamando a la funcion IngresoM
             $respuesta = AdminM::IngresoM($datosC, $tablaBD);
+
+            if ($respuesta== null){
+                echo 'Error al Ingresar';
+                return;
+            }
+
+            
             if ($respuesta['email'] == $_POST['demo-email'] && $respuesta['contraseña'] == $_POST['demo-pass']) {
 
                 //se crea variable de sesion
