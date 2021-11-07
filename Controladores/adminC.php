@@ -20,7 +20,7 @@ class AdminC
                 $_SESSION['Ingreso'] = true;
                 header('location:index.php?ruta=perfil');
             } else {
-                echo 'Error la Ingresar';
+                echo 'Error al Ingresar';
             }
         }
     }
