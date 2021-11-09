@@ -50,24 +50,26 @@ INSERT INTO `emoticon` (`idEmoticon`, `emoticon`, `descripcion`) VALUES
 
 
   -- recuerdo
-  -- falta relacionar la tabla recuerdo con tipo de recuerdo 
 CREATE TABLE IF NOT EXISTS `recuerdo` (
   `idRecuerdo` int(11) NOT NULL AUTO_INCREMENT,
+  `idUsuario` int(11),
   `titulo` varchar(30) ,
   `fecha` date ,
   `hora_desde` time,
   `hora_hasta` time,
-  `tipo_recuerdo` int(1), 
+  `idTipo` int(1), 
   `ubicacion` varchar(30) ,
   `coordenadas` point DEFAULT NULL,
   `compañia` varchar(30) ,
   `comentarios` varchar(255), 
   `informacion` text , 
-  PRIMARY KEY (`idRecuerdo`)
+  PRIMARY KEY (`idRecuerdo`),
+  FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario),
+  FOREIGN KEY (idTipo) REFERENCES tipo_recuerdo(idTipo)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
-INSERT INTO `recuerdo` (`idRecuerdo`, `titulo`, `fecha`, `hora_desde`, `hora_hasta`,tipo_recuerdo,`ubicacion`, `coordenadas`,`compañia`, `comentarios`) VALUES
-	(1, 'Casa de Jorge', "2021-09-21", "18:30", "01:30", "Charcas  2909 - CABA", POINT(-34.59462072, -58.40854815),"Jorge, Mario, Maria", "Juntada con amigos festejando el dia de la primavera");
+INSERT INTO `recuerdo` (`idRecuerdo`, `idUsuario`,`titulo`, `fecha`, `hora_desde`, `hora_hasta`,`idTipo`,`ubicacion`, `coordenadas`,`compañia`, `comentarios`) VALUES
+	(1, 1,'Casa de Jorge', "2021-09-21", "18:30", "01:30", 2,"Charcas  2909 - CABA", POINT(-34.59462072, -58.40854815),"Jorge, Mario, Maria", "Juntada con amigos festejando el dia de la primavera");
 
 
 -- emoticones/recuerdo
@@ -88,10 +90,24 @@ INSERT INTO `emoticon_recuerdo` (`idEmoticonRecuerdo`, `idRecuerdo`, `idEmoticon
   INSERT INTO `emoticon_recuerdo` (`idEmoticonRecuerdo`, `idRecuerdo`, `idEmoticon`) VALUES
   (3,  1, 5);
 
-  --favorito
+/* 
+--recuerdo/usuario
+CREATE TABLE  `recuerdo_usuario` (
+  `id_recuerdo_usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `idUsuario` int(11) NOT NULL,
+  `idRecuerdo` int(11) NOT NULL,
+  PRIMARY KEY (`id_recuerdo_usuario`),
+  FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario),
+  FOREIGN KEY (idRecuerdo) REFERENCES  recuerdo(idRecuerdo)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
- 
-  
+
+INSERT INTO `recuerdo_usuario` (`id_recuerdo_usuario`, `idUsuario`, `idRecuerdo`) VALUES
+	(1,  1, 1);
+ */
+
+
+  --favorito  
   CREATE TABLE  `favorito` (
   `idFavorito` int(11) NOT NULL AUTO_INCREMENT,
   `idUsuario` int(11) NOT NULL,
@@ -102,4 +118,26 @@ INSERT INTO `emoticon_recuerdo` (`idEmoticonRecuerdo`, `idRecuerdo`, `idEmoticon
   FOREIGN KEY (idRecuerdo) REFERENCES  recuerdo(idRecuerdo)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- falta tabla tipo_recuerdo
+--falta agregar favoritos
+
+
+
+
+
+-- tipo_recuerdo
+CREATE TABLE IF NOT EXISTS `tipo_recuerdo` (
+  `idTipo` int(1) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(20) NOT NULL,
+  PRIMARY KEY (`idTipo`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+
+INSERT INTO `tipo_recuerdo` (`idTipo`, `descripcion`) VALUES
+	(1, 'informacion');
+INSERT INTO `tipo_recuerdo` (`idTipo`, `descripcion`) VALUES
+	(2, 'buenos');
+INSERT INTO `tipo_recuerdo` (`idTipo`, `descripcion`) VALUES
+	(3, 'malos');
+INSERT INTO `tipo_recuerdo` (`idTipo`, `descripcion`) VALUES
+	(4, 'neutros');
+
