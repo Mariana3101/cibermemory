@@ -13,7 +13,9 @@
   	                <li><a href="index.php?ruta=mensajes">Mensajes</a></li>
   	                <li><a href="index.php?ruta=perfil">Perfil</a></li>
   	                <li><a href="index.php?ruta=registrar">Registrar</a></li>
-	  				<li><a href="index.php?ruta=iniciar_sesion">Ingresar</a></li>
+	  				
+					
+
 
   	                <?php
                         session_start();

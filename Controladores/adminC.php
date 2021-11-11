@@ -61,6 +61,22 @@ class AdminC
 
     }
 
+    public function Perfil()
+    {
+        $tablaBD = "usuario";
+
+        $respuesta = AdminM::PerfilM($tablaBD);
+        /*
+        foreach ($respuesta as $key => $value)
+        {
+            echo
+            '
+          
+                  
+            '
+        }*/
+    }
+
   
 
 }

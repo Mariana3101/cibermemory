@@ -6,7 +6,8 @@ class Modelo{
             $rutas== "perfil" || $rutas == "registrar" || $rutas == "iniciar_sesion"
             || $rutas == "busqueda_avanzada" || $rutas == "favoritos" || $rutas == "crear"
             || $rutas == "detalle" || $rutas == "detalle2" || $rutas == "editar" 
-            || $rutas == "resultado_busqueda" || $rutas == "error" || $rutas == "buscar2" || $rutas == "salir")
+            || $rutas == "resultado_busqueda" || $rutas == "error" || $rutas == "buscar2" 
+            || $rutas == "salir")
         {
 
            $pagina = "vistas/modulos/".$rutas.".php";
