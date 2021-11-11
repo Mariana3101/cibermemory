@@ -10,16 +10,16 @@
 
             <section>
                 <h2>Registrar</h2>
-                    <form method="post" action="#">
+                    <form method="post">
                         <div class="row gtr-uniform">
                             <div class="col-12">
                                 <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nombre" required />
                             </div>
                             <div class="col-12">
-                                <input type="email" name="demo-name" id="demo-name" value="" placeholder="Email" required/>
+                                <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" required/>
                             </div>
                             <div class="col-6 col-12">
-                                <input type="password" name="demo-email" id="demo-email" value="" placeholder="Contraseña" required />
+                                <input type="password" name="demo-pass" id="demo-pass" value="" placeholder="Contraseña" required />
                             </div>
 
                             <!--Aca va la huella digital-->
@@ -32,7 +32,7 @@
                             <div class="col-12">
                             
                                 <ul class="actions">
-                                    <li><input type="submit" value="Confirmar" class="primary" /></li>
+                                    <li><input type="submit" name="registrar" value="Confirmar" class="primary" /></li>
                                     
                                 </ul>
                                 
@@ -48,3 +48,10 @@
 </div>
 
 
+<?php
+
+$registrar= new AdminC();
+$registrar ->RegistrarC(); //llamo a la funcion RegistrarC
+
+
+?>

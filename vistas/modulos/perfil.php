@@ -1,10 +1,19 @@
 
 <?php
+/*
 session_start();
 if ( !$_SESSION['Ingreso']) {
     header('location:index.php?ruta=inicio');
     exit();
 }
+*/
+#session_start();
+if (!isset($_SESSION['Ingreso'])) {
+  $_SESSION['Ingreso'] = 0;
+} else {
+  $_SESSION['Ingreso']++;
+}
+
 ?>
 	<!-- Wrapper -->
     <div id="wrapper">

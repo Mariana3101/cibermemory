@@ -16,7 +16,7 @@
                         <input type="email" name="demo-email" id="demo-name" value="" placeholder="Email" required />
                     </div>
                     <div class="col-6 col-12">
-                        <input type="text" name="demo-pass" id="demo-email" value="" placeholder="Contraseña" required />
+                        <input type="password" name="demo-pass" id="demo-email" value="" placeholder="Contraseña" required />
                     </div>
                 
                     <!--Aca va la huella digital-->
@@ -44,8 +44,6 @@
 </section>
 
 </div>
-
-
 
 <?php
 

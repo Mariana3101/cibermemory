@@ -31,4 +31,36 @@ class AdminC
             }
         }
     }
+
+   public function RegistrarC()
+   {
+        if (isset($_POST['demo-name'])){
+            $nombre = $_POST['demo-name'];
+            $email = $_POST['demo-email'];
+            $contraseña = $_POST['demo-pass'];
+
+            $pdo = ConexionBD::cBD()->prepare("INSERT INTO usuario(nombre, email, contraseña) 
+                        VALUES ('$nombre', '$email','$contraseña')");
+
+
+            $pdo->execute();
+
+                if ($pdo)
+                {  
+                    session_start();
+                    $_SESSION['Ingreso'] = true;
+                    header('location:index.php?ruta=perfil');
+                    }else {
+                    echo 'Error al Ingresar';
+                }
+        }
+        
+      
+        
+
+
+    }
+
+  
+
 }
