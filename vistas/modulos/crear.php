@@ -8,7 +8,7 @@
     <div class="inner">
         <h2>Ingresar recuerdo </h2>
         <br>
-        <form method="post" action="#">
+        <form method="post">
             <div class="row gtr-uniform">
                 <!--Ingresar titulo-->
                 <div class="col-12">
@@ -22,18 +22,18 @@
                 </div>
                 <!--Ingresar hora de inicio-->
                 <div class="col-6 col-12-xsmall">
-                    <label for="hora_inicio">Hora de inicio </label>
+                    <label for="hora_desde">Hora de inicio </label>
                     <input type="text" name="hora_desde" id="demo-text" value="" placeholder="18:30" />
                 </div>
                 <!--Ingresar hora de finalizacion-->
                 <div class="col-6 col-12-xsmall">
-                    <label for="hora_finalizacion">Hora de finalización </label>
+                    <label for="hora_hasta">Hora de finalización </label>
                     <input type="text" name="hora_hasta" id="demo-text" value="" placeholder="01:30" />
                 </div>
                 <!--Seleccionar tipo de recuerdo -->
                 <div class="col-12">
-                    <label for="tipo_recuerdo">Seleccionar tipo </label>
-                    <select name="demo-category" id="demo-category">
+                    <label for="tipo_recuerdo" name="tipo_recuerdoR">Seleccionar tipo </label>
+                    <select name="idTipo" id="demo-category">
                         
                         <option value="1">Información</option>
                         <option value="2">Buenos</option>
@@ -68,7 +68,7 @@
                 <!--                             -->
                 <!--Ingresar Compañia -->
                 <div class="col-12">
-                    <label for="Compania">Compañia </label>
+                    <label for="compañia">Compañia </label>
                     <input type="text" name="compañia" id="demo-name" value="" placeholder="Jose, Andrea ..." />
                 </div>
                  <!--Ingresar Ubicacion -->
@@ -78,7 +78,7 @@
                 </div>
                 <!--Escriba su recuerdo -->
                 <div class="col-12">
-                    <label for="escrito">Comentarios </label>
+                    <label for="comentarios">Comentarios </label>
                     <textarea name="comentarios" id="demo-message" placeholder="Enter your memory " rows="6"></textarea>
                 </div>
                 <div class="col-12">
@@ -93,4 +93,14 @@
 </section>
 </div>
 
+<?php
 
+#$registrarR = new RecuerdoC();
+  
+#$registrarR ->RegistrarR();
+
+
+
+
+
+?>
