@@ -14,18 +14,18 @@ class AdminC
             //solicitamos respuesta al modelo, llamando a la funcion IngresoM
             $respuesta = AdminM::IngresoM($datosC, $tablaBD);
 
-            if ($respuesta== null){
+            if ($respuesta == null) {
                 echo 'Error al Ingresar';
                 return;
             }
 
-            
             if ($respuesta['email'] == $_POST['demo-email'] && $respuesta['contraseña'] == $_POST['demo-pass']) {
 
                 //se crea variable de sesion
                 session_start();
                 $_SESSION['Ingreso'] = true;
-                header('location:index.php?ruta=perfil');
+                $_SESSION['Usuario'] = $respuesta['idUsuario'];
+                header('Location:index.php?ruta=perfil');
             } else {
                 echo 'Error al Ingresar';
             }
