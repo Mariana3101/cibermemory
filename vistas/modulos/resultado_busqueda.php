@@ -8,17 +8,10 @@
 
 	if ($_SESSION['rta']) {
 
-
-
 		foreach ($_SESSION['rta'] as $key => $value) {
-			// and print out the values
-			//echo $value['titulo'];
-
-
-
+			var_dump($value['idRecuerdo']);
 			echo '<section>
 	
-
 				<a href="#" class="image"><img src="data:image/jpeg;base64,' . base64_encode($value['imagen']) . ' " alt="" data-position="center center"  width="300" height="300" /></a>
 				<div class="content">
 					<div class="dropdown  d-md-flex justify-content-md-end">
@@ -30,7 +23,7 @@
 		
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 							<li><a class="dropdown-item" href="#">Renderizar</a></li>
-							<li><a class="dropdown-item" href="#">Borrar</a></li>
+							<li><a class="dropdown-item" href="index.php?ruta=resultado_busqueda&idB=' . $value['idRecuerdo'] . '">Borrar</a></li>
 							<li><a class="dropdown-item" href="#">Agregar a Favoritos</a></li>
 							<li><a class="dropdown-item" href="#">Editar</a></li>
 							<li><a class="dropdown-item" href="#">Cambiar Imagen </a></li>
@@ -66,10 +59,7 @@
 							Comentario: ' . $value['comentarios']  . '
 							</p>
 
-							<?php foreach (' . $_SESSION['rta'] . '  as $key => $v) {
-							   echo "	' . $v['emoticon']   . '"
-							}; ?>
-	
+						
 						
 
 					</div>
@@ -80,6 +70,8 @@
 		
 			';
 		}
+	} else {
+		echo 'no hay registros para mostrar';
 	}
 
 
@@ -91,3 +83,8 @@
 
 
 </div>
+
+
+<?php
+$eliminar = new RecuerdoC();
+$eliminar->EliminarRecuerdo();

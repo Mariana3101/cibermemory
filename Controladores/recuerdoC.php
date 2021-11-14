@@ -26,4 +26,27 @@ class RecuerdoC
             header('Location:index.php?ruta=resultado_busqueda');
         }
     }
+
+
+
+    //Elimnar
+    public function EliminarRecuerdo()
+    {
+
+        if (isset($_GET["idB"])) {
+
+            $datosC = $_GET["idB"];
+            $tablaBD = "recuerdo";
+            $respuesta = RecuerdoM::EliminarRecuerdo($datosC, $tablaBD);
+            if ($respuesta == "Bien") {
+                /// exit(header("Location: /resultado_busqueda")); rompe
+                // session_start();
+                //$_SESSION['rta'] = $respuesta; //y esto??
+                header("Location:index.php?ruta=busqueda_simple");
+                //header("Refresh:0");
+            } else {
+                echo "error";
+            }
+        }
+    }
 }
