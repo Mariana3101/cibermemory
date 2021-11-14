@@ -63,6 +63,7 @@ CREATE TABLE IF NOT EXISTS `recuerdo` (
   `compañia` varchar(30) ,
   `comentarios` varchar(255), 
   `informacion` text , 
+  `imagen` blob,
   PRIMARY KEY (`idRecuerdo`),
   FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario),
   FOREIGN KEY (idTipo) REFERENCES tipo_recuerdo(idTipo)
@@ -112,7 +113,8 @@ INSERT INTO `emoticon_recuerdo` (`idEmoticonRecuerdo`, `idRecuerdo`, `idEmoticon
 	(2,  1, 2);
   INSERT INTO `emoticon_recuerdo` (`idEmoticonRecuerdo`, `idRecuerdo`, `idEmoticon`) VALUES
   (3,  1, 5);
-
+INSERT INTO `emoticon_recuerdo` (`idEmoticonRecuerdo`, `idRecuerdo`, `idEmoticon`) VALUES
+  (4,  2, 3);
 
 
   --favorito  
