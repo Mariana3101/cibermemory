@@ -70,20 +70,23 @@ CREATE TABLE IF NOT EXISTS `recuerdo` (
 INSERT INTO `recuerdo` (`idRecuerdo`,`titulo`, `fecha`, `hora_desde`, `hora_hasta`,`idTipo`,`ubicacion`, `coordenadas`,`compañia`, `comentarios`) VALUES
 	(1,'Casa de Jorge', "2021-09-21", "18:30", "01:30", 2,"Charcas  2909 - CABA", POINT(-34.59462072, -58.40854815),"Jorge, Mario, Maria", "Juntada con amigos festejando el dia de la primavera");
 
-
-INSERT INTO `recuerdo` (`idRecuerdo`,`titulo`, `fecha`, `hora_desde`, `hora_hasta`,`idTipo`,`ubicacion`, `coordenadas`,`compañia`, `comentarios`) VALUES
-	(2,'Viaje a Luján', "2021-09-22", "8:30", "01:30", 4,"Av. Ntra Sra de Luján 816", POINT(-34.5659189, -59.1225752),"Maria", "Visita a la Basilica");
-
-
-
-
-
 INSERT INTO `recuerdo_usuario` (`id_recuerdo_usuario`, `idUsuario`, `idRecuerdo`) VALUES
 	(1,  1, 1);
- 
+
+
+INSERT INTO `recuerdo` (`idRecuerdo`,`titulo`, `fecha`, `hora_desde`, `hora_hasta`,`idTipo`,`ubicacion`, `coordenadas`,`compañia`, `comentarios`) VALUES
+	(2,'Viaje a Luján', "2021-09-22", "8:30", "01:30", 2,"Av. Ntra Sra de Luján 816", POINT(-34.5659189, -59.1225752),"Maria", "Visita a la Basilica");
+
 
 INSERT INTO `recuerdo_usuario` (`id_recuerdo_usuario`, `idUsuario`, `idRecuerdo`) VALUES
 	(2,  2, 2);
+
+  INSERT INTO `recuerdo` (`idRecuerdo`,`titulo`, `fecha`, `hora_desde`, `hora_hasta`,`idTipo`,`ubicacion`, `coordenadas`,`compañia`, `comentarios`) VALUES
+	(3,'Cena con amigos', "2021-09-28", "20:30", "12:30", 2,"Agüero 526", POINT(-34.6036867, -58.4139395),"Maria, Jose, Marcos", "Muy buena la comida");
+
+INSERT INTO `recuerdo_usuario` (`id_recuerdo_usuario`, `idUsuario`, `idRecuerdo`) VALUES
+	(3,  2, 3);
+
 
 --recuerdo/usuario
 CREATE TABLE  `recuerdo_usuario` (

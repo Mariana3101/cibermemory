@@ -9,10 +9,10 @@
 	if ($_SESSION['rta']) {
 
 		foreach ($_SESSION['rta'] as $key => $value) {
-			var_dump($value['idRecuerdo']);
+
 			echo '<section>
 	
-				<a href="#" class="image"><img src="data:image/jpeg;base64,' . base64_encode($value['imagen']) . ' " alt="" data-position="center center"  width="300" height="300" /></a>
+				<a href="#" class="image"><img src="data:image/jpeg;base64,' . base64_encode($value['imagen']) . ' " alt="" data-position="center center"  width="400" height="300" /></a>
 				<div class="content">
 					<div class="dropdown  d-md-flex justify-content-md-end">
 						<button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,13 +37,13 @@
 					' . $value['titulo'] . '
 						</h4>
 						<p>
-						Fecha: ' . $value['fecha'] . ' 
-							
+						<span style="color: white; font-size: 20px;" >Fecha: </span>' . $value['fecha'] . ' 
+						</p>
 						<p>
-						Horario: ' . date('g:i A', strtotime($value['hora_desde'])) . ' a ' . date('g:i A', strtotime($value['hora_hasta'])) . '
-						
+						<span style="color: white; font-size: 20px;" >Horario: </span> ' . date('g:i A', strtotime($value['hora_desde'])) . ' a ' . date('g:i A', strtotime($value['hora_hasta'])) . '
+						</p>
 						<p>
-						Ubicacion: ' . $value['Latitude']  . '
+						<span style="color: white; font-size: 20px;" >Ubicación: </span>
 						</p>
 
 
@@ -53,10 +53,10 @@
 							</p>
 
 							<p>
-							Compañia: ' . $value['compañia']  . '
+							<span style="color: white; font-size: 20px;" >Compañia: </span>' . $value['compañia']  . '
 							</p>
 							<p>
-							Comentario: ' . $value['comentarios']  . '
+							<span style="color: white; font-size: 20px;" >Comentario: </span> ' . $value['comentarios']  . '
 							</p>
 
 						
