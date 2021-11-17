@@ -52,9 +52,18 @@ class RecuerdoM extends conexionBD
 
 
     //Eliminar
+    /*
     static public function EliminarRecuerdo($datosC, $tablaBD)
     {
         $pdo = ConexionBD::cBD()->prepare("DELETE FROM $tablaBD WHERE idRecuerdo=:idB");
+        $pdo->bindParam(":idB", $datosC, PDO::PARAM_INT);
+        if ($pdo->execute()) {
+           
+        } else {
+            return "Error";
+        }
+        $pdo->close();
+        $pdo = ConexionBD::cBD()->prepare("DELETE FROM recuerdo_usuario WHERE idRecuerdo=:idB");
         $pdo->bindParam(":idB", $datosC, PDO::PARAM_INT);
         if ($pdo->execute()) {
             return "Bien";
@@ -62,5 +71,14 @@ class RecuerdoM extends conexionBD
             return "Error";
         }
         $pdo->close();
+        $pdo = ConexionBD::cBD()->prepare("DELETE FROM emoticon_recuerdo WHERE idRecuerdo=:idB");
+        $pdo->bindParam(":idB", $datosC, PDO::PARAM_INT);
+        if ($pdo->execute()) {
+            return "Bien";
+        } else {
+            return "Error";
+        }
+        $pdo->close();
+*/
     }
 }
