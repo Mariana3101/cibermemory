@@ -12,8 +12,19 @@ class RecuerdoC
         $respuesta = RecuerdoM::BusquedaSimpleM($datosC, $tablaBD);
 
         if ($respuesta != []) {
+
+            $emoticones = array();
+            foreach ($respuesta as $key => $value) {
+
+                $datosC = array("idRecuerdo" => $value["idRecuerdo"]);
+                $respuesta2 = RecuerdoM::BusquedaEmoticonM($datosC);
+                array_push($emoticones, $respuesta2);
+            }
+            //var_dump($emoticones);
+
             session_start();
             $_SESSION['rta'] = $respuesta;
+            $_SESSION['emoticones'] = $emoticones;
             header('Location:index.php?ruta=resultado_busqueda');
         }
     }

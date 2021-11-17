@@ -88,6 +88,7 @@ INSERT INTO `recuerdo_usuario` (`id_recuerdo_usuario`, `idUsuario`, `idRecuerdo`
 	(3,  2, 3);
 
 
+
 --recuerdo/usuario
 CREATE TABLE  `recuerdo_usuario` (
   `id_recuerdo_usuario` int(11) NOT NULL AUTO_INCREMENT,
@@ -126,6 +127,10 @@ INSERT INTO `emoticon_recuerdo` (`idEmoticonRecuerdo`, `idRecuerdo`, `idEmoticon
   (3,  1, 5);
 INSERT INTO `emoticon_recuerdo` (`idEmoticonRecuerdo`, `idRecuerdo`, `idEmoticon`) VALUES
   (4,  2, 3);
+INSERT INTO `emoticon_recuerdo` (`idEmoticonRecuerdo`, `idRecuerdo`, `idEmoticon`) VALUES
+  (5,  3, 1);
+INSERT INTO `emoticon_recuerdo` (`idEmoticonRecuerdo`, `idRecuerdo`, `idEmoticon`) VALUES
+  (6,  3, 2);
 
 
   --favorito  

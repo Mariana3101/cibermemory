@@ -5,7 +5,6 @@
 
 	<?php
 
-
 	if ($_SESSION['rta']) {
 
 		foreach ($_SESSION['rta'] as $key => $value) {
@@ -58,9 +57,23 @@
 							<p>
 							<span style="color: white; font-size: 20px;" >Comentario: </span> ' . $value['comentarios']  . '
 							</p>
+							<p>
+							<span style="color: white; font-size: 20px;" >Emociones: </span> 
+							</p>
+							'
+	?>
 
-						
-						
+			<?php
+			foreach ($_SESSION['emoticones'] as $key1 => $value1) {
+				foreach ($value1 as $key2 => $value2) {
+					if ($value['idRecuerdo'] == $value2[1]) {
+						echo '<span style="color: white; font-size: 40px;" > ' .  $value2[0] . '   </span>   ';
+					}
+				}
+			}
+			?>
+
+	<?php echo '		
 
 					</div>
 				</div>
