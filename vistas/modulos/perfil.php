@@ -1,21 +1,17 @@
 
 <?php
-/*
-session_start();
-if ( !$_SESSION['Ingreso']) {
-    header('location:index.php?ruta=inicio');
-    exit();
-}
-*/
-#session_start();
+
 if (!isset($_SESSION['Ingreso'])) {
   $_SESSION['Ingreso'] = 0;
+  header('location:index.php?ruta=inicio');
 } else {
   $_SESSION['Ingreso']++;
   
 }
 
 ?>
+
+
 
 	<!-- Wrapper -->
     <div id="wrapper">
@@ -30,23 +26,18 @@ if (!isset($_SESSION['Ingreso'])) {
                <!--Falta icono para modificar el avatar -->
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
             </div>
-
-            <?php if ((isset($_SESSION['Ingreso'])) && ($_SESSION['Ingreso'] != ""))
-            {
-            echo "Hello ". $_SESSION['Ingreso'];
-            }
-            else
-            {?>
-            <p></p><?php }?>
+         
+         
+           
            
             <div class="col-md-4">
                 <div class="p-3 py-5 gtr-uniform">
                     <div class="d-flex justify-content-between align-items-center experience"><span class="border px-3 p-1 add-experience"></div><br>
                     <br>
-                        <div class="col-md-12 ">
-                            <h5>
-                            <label class="labels"><?php echo ($_POST['demo-name']); ?></label></h5>
-                        </div> 
+                    <div class="col-md-12 ">
+                        <h5>
+                        <label class="labels">Nombre<?php isset($_SESSION["email"]) ? print $_SESSION["email"] : ""; ?> </label></h5>
+                    </div> 
                   <br>
                   <!--
                     <div class="col-md-12">
@@ -62,7 +53,7 @@ if (!isset($_SESSION['Ingreso'])) {
                 <br>-->
                     <div class="col-md-12">
                         <h5>
-                        <label class="labels"><?php echo htmlspecialchars($_POST['demo-email']); ?></label></h5>
+                        <label class="labels"></label></h5>
                     </div>
 
                         <br>
@@ -72,15 +63,18 @@ if (!isset($_SESSION['Ingreso'])) {
                         <input type="text" name="demo-name" id="demo-name" value="" placeholder="Agregar numero de teléfono"/>
                         
                     </div>
-                    <!--Falta icono de editar y borrar -->
                     <br>
                 </div>
             </div>
+
+          
+           
         </div>
     </div>
 
 </section>
 </div>
+
 
 <?php
 $perfil = new AdminC();

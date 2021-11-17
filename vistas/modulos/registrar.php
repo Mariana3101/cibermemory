@@ -1,5 +1,7 @@
-
-
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+?>
 <!-- Wrapper -->
 <div id="wrapper">
 
@@ -8,9 +10,9 @@
     <div class="inner">
          <h1>CiberMemory</h1>
 
-            <section>
+            <section> <!--action="index.php?ruta=perfil"-->
                 <h2>Registrar</h2>
-                    <form method="post">
+                    <form method="post" >
                         <div class="row gtr-uniform">
                             <div class="col-12">
                                 <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nombre" required />
@@ -53,5 +55,7 @@
 $registrar= new AdminC();
 $registrar ->RegistrarC(); //llamo a la funcion RegistrarC
 
+#$verificarUsuario = new ValidacionesC();
+#$verificarUsuario -> VerificarUsuario();
 
 ?>
