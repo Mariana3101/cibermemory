@@ -14,18 +14,24 @@ class AdminC
             //solicitamos respuesta al modelo, llamando a la funcion IngresoM
             $respuesta = AdminM::IngresoM($datosC, $tablaBD);
 
-            if ($respuesta== null){
+            if ($respuesta == null) {
                 echo 'Error al Ingresar';
                 return;
             }
 
-            
             if ($respuesta['email'] == $_POST['demo-email'] && $respuesta['contraseña'] == $_POST['demo-pass']) {
 
                 //se crea variable de sesion
                 session_start();
                 $_SESSION['Ingreso'] = true;
-                header('location:index.php?ruta=perfil');
+                $_SESSION['Usuario'] = $respuesta['idUsuario'];
+                $_SESSION['email'] = $respuesta['email'];
+                $_SESSION['nombre'] = $respuesta['nombre'];
+
+                $_SESSION['aDatos'] = array();
+                $_SESSION['aDatos']['nombre'] = $respuesta['nombre'];
+
+                header('Location:index.php?ruta=perfil');
             } else {
                 echo 'Error al Ingresar';
             }
@@ -47,8 +53,19 @@ class AdminC
 
                 if ($pdo)
                 {  
-                    session_start();
+                    $nombre = $_POST['demo-name'];
+                    $email = $_POST['demo-email'];
+                    
                     $_SESSION['Ingreso'] = true;
+                   
+                 
+                    $_SESSION['email'] = $email;
+                    $_SESSION['nombre'] =$nombre ;
+    
+                    $_SESSION['aDatos'] = array();
+                    $_SESSION['aDatos']['nombre'] = $nombre;
+    
+                    
                     header('location:index.php?ruta=perfil');
                     }else {
                     echo 'Error al Ingresar';
@@ -61,22 +78,7 @@ class AdminC
 
     }
 
-    public function Perfil()
-    {
-        $tablaBD = "usuario";
-
-        $respuesta = AdminM::PerfilM($tablaBD);
-        /*
-        foreach ($respuesta as $key => $value)
-        {
-            echo
-            '
-          
-                  
-            '
-        }*/
-    }
-
+   
   
 
 }

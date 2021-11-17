@@ -1,6 +1,7 @@
 
 <?php
 
+
 if (!isset($_SESSION['Ingreso'])) {
   $_SESSION['Ingreso'] = 0;
   header('location:index.php?ruta=inicio');
@@ -32,34 +33,42 @@ if (!isset($_SESSION['Ingreso'])) {
            
             <div class="col-md-4">
                 <div class="p-3 py-5 gtr-uniform">
-                    <div class="d-flex justify-content-between align-items-center experience"><span class="border px-3 p-1 add-experience"></div><br>
+                    
                     <br>
                     <div class="col-md-12 ">
                         <h5>
-                        <label class="labels">Nombre<?php isset($_SESSION["email"]) ? print $_SESSION["email"] : ""; ?> </label></h5>
+                        
+                          <label class="labels">Nombre: <?php isset($_SESSION["nombre"]) ? print $_SESSION["nombre"] : ""; ?> </label></h5>
                     </div> 
                   <br>
                   <!--
                     <div class="col-md-12">
                         <h5>Apellido</h5>
                         <label class="labels">Perez</label>
-                    </div>
+                    </div> -->
+  
                     <br>
                     <div class="col-md-12">
                         <h5>Fecha de nacimiento</h5>
-                        
+                       
+                        <label class="labels">Nombre: <?php
+                       
+                        isset($_SESSION["fecha_nac"]) ? print $_SESSION["fecha_nac"] : ""; ?> </label></h5>
+
                         <input type="text" name="demo-name" id="demo-name" value="" placeholder="Agregar fecha de nacimiento"/>
                     </div>
-                <br>-->
+                <br>
                     <div class="col-md-12">
                         <h5>
-                        <label class="labels"></label></h5>
+                        <label class="labels">  <label class="labels">Email: <?php isset($_SESSION["email"]) ? print $_SESSION["email"] : ""; ?> </label></h5></label></h5>
                     </div>
 
                         <br>
                     <div class="col-md-12">
                         <h5>Numero de teléfono</h5>
-                       
+                        <label class="labels">Nombre: <?php 
+                        
+                        ?> </label></h5>
                         <input type="text" name="demo-name" id="demo-name" value="" placeholder="Agregar numero de teléfono"/>
                         
                     </div>
@@ -76,11 +85,5 @@ if (!isset($_SESSION['Ingreso'])) {
 </div>
 
 
-<?php
-$perfil = new AdminC();
-  
-$perfil ->Perfil();
-
-?>
 
 
